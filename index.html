@@ -18,13 +18,13 @@
             </div>
     
             <nav>
-                <ul>
+                <ul id="menuItems">
                     <li>
-                        <a href=""> Home</a>
+                        <a href="index.html"> Home</a>
                     </li>
     
                     <li>
-                        <a href=""> Products</a>
+                        <a href="products.html"> Products</a>
                     </li>
     
                     <li>
@@ -40,6 +40,7 @@
             </nav>
 
             <img src="images/cart.png " width="30px" height="30px" alt="">
+            <img src="images/menu.png" class="menu-icon" alt="" onclick="menuToggle()">
         </div>
 
         <div class="row">
@@ -197,10 +198,7 @@
            </div>
            <p>$50.00</p>
        </div>
-    </div>
 
-
-    <div class="row">
         <div class="col-4">
             <img src="images/product-9.jpg" alt="">
             <h4>Red Printed T-Shirt</h4>
@@ -384,6 +382,11 @@
                  <p>
                      Download App for Android and IOS mobile phone.
                  </p>
+
+                 <div class="app-logo">
+                     <img src="images/play-store.png" alt="">
+                     <img src="images/app-store.png" alt="">
+                 </div>
              </div>
 
 
@@ -442,7 +445,25 @@
                 </ul>
             </div>
          </div>
+
+         <hr>
+         <p class="copyright">
+             Copy Right 2020 - MutubaStore
+         </p>
      </div>
  </div>
+
+ <script>
+     var menuItems = document.getElementById("menuItems")
+     menuItems.style.maxHeight='0px'
+     function menuToggle(){
+         if(menuItems.style.maxHeight=='0px'){
+             menuItems.style.maxHeight='200px'
+         }
+         else{
+            menuItems.style.maxHeight='0px'
+         }
+     }
+ </script>
 </body>
 </html>

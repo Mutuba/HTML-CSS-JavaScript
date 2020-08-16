@@ -55,6 +55,7 @@ p{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    /* space evenly distributed among flex items end even space equal space before first and after last block */
     justify-content: space-around;
 
 }
@@ -254,10 +255,153 @@ p{
     filter: grayscale(0);
 }
 
+/* Footer using the same container class as header section */
+
+
 .footer{
     background: #000;
     color: #8a8a8a;
     font-size: 14px;
+    /* When three values are specified, the first padding applies to the top, the second to the right and left, the third to the bottom.
+    When four values are specified, the paddings apply to the top, right, bottom, and left in that order. */
     padding: 60px 0 20px;
+
+}
+
+.footer p{
+    color: #8a8a8a;
+}
+
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+
+}
+
+.footer-col-1{
+    flex-basis: 30%;
+}
+
+
+.footer-col-2{
+    /* take all available space */
+    flex: 1;
+    text-align: center;
+
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+
+}
+
+.footer-col-3 ul, .footer-col-4 ul{
+    list-style-type: none;
+
+}
+
+.app-logo{
+    margin-top: 20px;
+
+}
+
+.app-logo img{
+    width: 140px;
+}
+
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright{
+    text-align: center;
+
+}
+
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+
+/* all products */
+
+.row-2{
+    /* space will be created btwn blocks and push blocks towards the biggining and end, mostly used in flex container with two items  */
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+
+.row-2 select{
+    border: 1px solid #ff523b;
+    padding: 5px;
+}
+
+select:focus{
+    outline: none;
+}
+
+/* media query for menu  less than 800 px */
+
+@media only screen and (max-width :800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        /* take the whole width of screen */
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+
+    }
+
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    nav ul li a{
+        color: #fff;
+        font-size: 10px;
+    }
+
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+/* media query for menu  less than 800 px */
+
+@media only screen and (max-width : 600px){
+    .row{
+        text-align: center;
+    }
+
+    /* flex-basis is applied to items in flex container and depending on flex percentage an item may occupy the whole width or share equally */
+    /* the items will each take the whole width as it is 100% */
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+
+    }
 
 }
