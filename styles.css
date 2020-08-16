@@ -43,11 +43,14 @@ p{
 
 .container{
     max-width: 1300px;
+    /* browse determine the margins */
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
 
+
+/* row class has been reused to flex items */
 .row{
     display: flex;
     align-items: center;
@@ -109,6 +112,9 @@ p{
     width: 100%;
 }
 
+
+/* N/B diff btwn container and small container is max-width value  1300px vs 1080 */
+/* they all house a row */
 .small-container{
     margin: auto;
     padding-left: 25px;
@@ -181,7 +187,6 @@ p{
     color: #555;
 }
 
-
 /* Testimonials*/
 
 .testimonial{
@@ -204,4 +209,55 @@ p{
 
 .testimonial .col-3:hover{
     transform: translateY(-10px);
+}
+
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #ff523b;
+}
+
+
+.testimonial .col-3 p{
+    margin: 12px 0;
+    font-size: 12px;
+    color: #777;
+
+}
+
+
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+
+}
+
+/* Brands */
+
+.brands{
+    margin: 100px auto;
+}
+.col-5{
+    width: 160px;
+}
+
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+
+.col-5 img:hover{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(0);
+}
+
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+
 }
